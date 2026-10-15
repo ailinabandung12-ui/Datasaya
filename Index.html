@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biodata Meyda - Forest Theme</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0e1f14; color:#e8f5e9; min-height:100vh;
+  background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070');
+  background-size:cover; background-attachment:fixed; background-position:center;
+}
+.overlay{position:fixed;inset:0;background:linear-gradient(180deg, rgba(14,31,20,0.6), rgba(14,31,20,0.85));backdrop-filter:blur(1px);z-index:-1}
+.leaves{position:fixed;inset:0;pointer-events:none;z-index:0}
+.leaf{position:absolute;top:-10%;animation:fall linear infinite;opacity:.8}
+@keyframes fall{0%{transform:translateY(0) rotate(0deg)}100%{transform:translateY(110vh) rotate(360deg) translateX(60px)}}
+.container{max-width:850px;margin:30px auto;padding:20px;position:relative;z-index:1}
+.header{
+  text-align:center; background:rgba(255,255,255,0.09); backdrop-filter:blur(14px);
+  border:1px solid rgba(165,214,167,0.2); border-radius:28px; padding:35px 20px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+.avatar{
+  width:110px;height:110px;margin:0 auto 15px; border-radius:50%;
+  background:linear-gradient(135deg,#81c784,#2e7d32); display:grid; place-items:center;
+  font-size:55px; border:3px solid #c8e6c9; box-shadow:0 0 20px rgba(102,187,106,0.5);
+}
+.header h1{font-family:'Caveat',cursive;font-size:48px;color:#c8e6c9;line-height:1}
+.header .sekolah{margin-top:8px;opacity:.85;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+.badge{margin-top:18px;display:inline-flex;gap:8px;background:rgba(46,125,50,0.6);border:1px solid #81c784;padding:7px 18px;border-radius:30px;font-size:12px}
+.grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:20px;margin-top:22px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.card{
+  background:rgba(255,255,255,0.08); backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.13); border-radius:20px; padding:22px;
+}
+.card h3{color:#a5d6a7;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.item{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,0.12)}
+.item:last-child{border:none}
+.item b{color:#e8f5e9;font-weight:600;font-size:14px}
+.item span{font-size:14px;opacity:.9;text-align:right}
+.quote{
+  margin-top:20px; background:linear-gradient(135deg,rgba(46,125,50,0.25),rgba(0,0,0,0.2));
+  border-left:4px solid #66bb6a; padding:18px 20px; border-radius:0 18px 18px 0; font-style:italic; color:#c8e6c9;
+}
+.btn{margin-top:20px;display:block;text-align:center;background:#2e7d32;color:white;text-decoration:none;padding:14px;border-radius:14px;font-weight:600;transition:.3s;border:1px solid #66bb6a}
+.btn:hover{background:#388e3c;transform:translateY(-2px)}
+footer{text-align:center;margin:28px 0 10px;opacity:.5;font-size:11px}
+</style>
+</head>
+<body>
+<div class="overlay"></div>
+<div class="leaves" id="leaves"></div>
+
+<div class="container">
+  <div class="header">
+    <div class="avatar">🌿</div>
+    <h1>Meyda</h1>
+    <div class="sekolah">SMK Banjar Asri • X TJKT 1</div>
+    <div class="badge">🌲 Kp Cimangkin RT01 RW21 • Forest Girl</div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🌱 Biodata Lengkap</h3>
+      <div class="item"><b>Nama</b><span>Meyda</span></div>
+      <div class="item"><b>Sekolah</b><span>SMK Banjar Asri</span></div>
+      <div class="item"><b>Kelas</b><span>X TJKT 1</span></div>
+      <div class="item"><b>Alamat</b><span>Kp Cimangkin RT01 RW21</span></div>
+      <div class="item"><b>Jurusan</b><span>Teknik Jaringan Komputer & Telekomunikasi</span></div>
+    </div>
+
+    <div class="card">
+      <h3>🍃 Tentang Aku</h3>
+      <div class="item"><b>Hobi</b><span>Belajar & Eksplor Alam</span></div>
+      <div class="item"><b>Favorit</b><span>Suasana Hutan</span></div>
+      <div class="item"><b>Motto</b><span>Tumbuh seperti pohon</span></div>
+      <div class="item"><b>Status</b><span>Siswi SMK</span></div>
+      <a class="btn" href="https://wa.me/" target="_blank">💬 Hubungi Aku</a>
+    </div>
+  </div>
+
+  <div class="card quote">
+    "Seperti akar yang kuat di dalam hutan, aku belajar untuk tetap tumbuh meski dalam sunyi. - Meyda 🌿"
+  </div>
+
+  <footer>© 2026 Biodata Meyda • Tema Hutan • Dibuat dengan cinta 🌲</footer>
+</div>
+
+<script>
+const c=document.getElementById('leaves');
+const em=['🍃','🍂','🌿','🍁'];
+for(let i=0;i<20;i++){
+  let d=document.createElement('div'); d.className='leaf';
+  d.innerText=em[Math.floor(Math.random()*em.length)];
+  d.style.left=Math.random()*100+'vw';
+  d.style.animationDuration=(6+Math.random()*9)+'s';
+  d.style.animationDelay=Math.random()*6+'s';
+  d.style.fontSize=(14+Math.random()*20)+'px';
+  c.appendChild(d);
+}
+</script>
+</body>
+</html>
